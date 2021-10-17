@@ -16,29 +16,43 @@
     --right-text-color: rgb(151, 225, 217);
 }
 
-body {
+html, body {
     font-family: Helvetica;
     font-weight: bold;
     font-size: small;
     margin: 0;
     color: var(--text-color);
     background-color: var(--bg-color);
+    height: 100%;
+}
+
+.container {
+    height: 100%;
 }
 
 .top, .left, .right {
     padding: 1.5em;
+    box-sizing: border-box;
 }
 
 .top {
     background-color: var(--top-bg-color);
+    height: 33%;
+
+}
+
+.bottom {
+    height: calc(100% - 33%);
 }
 
 .left {
     background-color: var(--left-color);
+    height: 50%;
 }
 
 .right {
     background-color: var(--right-color);
+    height: 50%;
 }
 
 h1 {
@@ -131,7 +145,6 @@ ul {
 
 @media (min-width: 730px) {
     html,body {
-        height: 100%;
         position: relative;
     }
     
@@ -141,7 +154,15 @@ ul {
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+    }
+
+    .container, .top, .bottom, .left, .right {
+        height: auto;
     }
 
     .top {
@@ -181,4 +202,15 @@ ul {
         display: block;
     }
 
+}
+
+@media (max-height: 550px) and (orientation: landscape) {
+    .container {
+        top: 0;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
 }
