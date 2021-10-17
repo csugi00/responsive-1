@@ -1,0 +1,184 @@
+:root {
+    --bg-color: rgb(224, 240, 255);
+    --left-color: rgb(30, 198, 174);
+    --right-color: rgb(84, 205, 193);
+    --text-color: white;
+    --top-text-color: rgb(209, 209, 209);
+    --top-bg-color: white;
+    --title-color: white;
+    --first-title-color: rgb(77, 203, 191);
+    --top-title-color: rgb(77, 203, 191);
+    --top-blue-color: rgb(27, 78, 197);
+    --offer-text-color: rgb(82, 221, 207);
+    --button-bg-color: black;
+    --button-text-color: white;
+    --button-hover-color: rgb(49, 49, 49);
+    --right-text-color: rgb(151, 225, 217);
+}
+
+body {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: small;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.top, .left, .right {
+    padding: 1.5em;
+}
+
+.top {
+    background-color: var(--top-bg-color);
+}
+
+.left {
+    background-color: var(--left-color);
+}
+
+.right {
+    background-color: var(--right-color);
+}
+
+h1 {
+    color: var(--first-title-color);
+}
+
+header {
+    font-size: 1.4em;
+    margin-bottom: 0.8em;
+}
+
+.top header {
+    color: var(--top-title-color);
+    font-size: 1.4em;
+    margin-bottom: 0.8em;
+}
+
+.header-title {
+    color: var(--top-blue-color);
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.top span {
+    color: var(--top-text-color);
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.left header {
+    padding: 1em 0 0.5em 0;
+}
+
+.offer-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    padding-bottom: 0.5em;
+}
+
+.offer-title span {
+    color: var(--offer-text-color);
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.offer {
+    font-weight: normal;
+    font-size: 0.9em;
+    padding-bottom: 3em;
+}
+
+.button {
+    margin: 0 1em;
+    max-width: 400px;
+    margin: auto;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 0.4em;
+    padding: 1em 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.right li {
+    padding-top: 0.5em;
+    color: var(--right-text-color);
+    list-style-type: none;
+    font-size: 0.9em;
+}
+
+@media (min-width: 730px) {
+    html,body {
+        height: 100%;
+        position: relative;
+    }
+    
+    .container {
+        width: 85%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top {
+        border-radius: 0.5em 0.5em 0 0;
+    }
+
+    .left {
+        border-radius: 0 0 0 0.5em;
+    }
+
+    .right {
+        border-radius: 0 0 0.5em 0;
+    }
+
+    .top, .left, .right {
+        padding: 2.5em;
+    }
+
+    .bottom {
+        display: flex;
+    }
+
+    .left, .right {
+        width: 50%;
+    }
+
+    .left header, .right header {
+        height: 15%;
+        padding-top: 0.5em
+    }
+
+    .right ul {
+        height: 85%;
+    }
+
+    .top span {
+        display: block;
+    }
+
+}
